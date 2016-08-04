@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC4DB513-F163-4109-9F85-868C252209C2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CS493_Simms_ReceivingApplication</RootNamespace>
+    <AssemblyName>CS493_Simms_ReceivingApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presentation\DeliveryCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DeliveryCheckForm.Designer.cs">
+      <DependentUpon>DeliveryCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ManualDelivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ManualDelivery.Designer.cs">
+      <DependentUpon>ManualDelivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ManualReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ManualReturn.Designer.cs">
+      <DependentUpon>ManualReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\ReceivedListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\ReceivedListForm.Designer.cs">
+      <DependentUpon>ReceivedListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\RetrievalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\RetrievalForm.Designer.cs">
+      <DependentUpon>RetrievalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\SuspendedRetrievalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\SuspendedRetrievalForm.Designer.cs">
+      <DependentUpon>SuspendedRetrievalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\VendorCheckinMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\VendorCheckinMenu.Designer.cs">
+      <DependentUpon>VendorCheckinMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\checkinName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\checkinName.Designer.cs">
+      <DependentUpon>checkinName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\checkinUPC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\checkinUPC.Designer.cs">
+      <DependentUpon>checkinUPC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\DSDMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\DSDMenu.Designer.cs">
+      <DependentUpon>DSDMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\VendorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\VendorMenu.Designer.cs">
+      <DependentUpon>VendorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presentation\VendorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\VendorList.Designer.cs">
+      <DependentUpon>VendorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DataAccess.cs" />
+    <Compile Include="Services\DataTransfer.cs" />
+    <Compile Include="Services\ItemTrans.cs" />
+    <Compile Include="TransactionsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TransactionsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VendorProductsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VendorProductsDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\DeliveryCheckForm.resx">
+      <DependentUpon>DeliveryCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ManualDelivery.resx">
+      <DependentUpon>ManualDelivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ManualReturn.resx">
+      <DependentUpon>ManualReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ReceivedListForm.resx">
+      <DependentUpon>ReceivedListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\RetrievalForm.resx">
+      <DependentUpon>RetrievalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\SuspendedRetrievalForm.resx">
+      <DependentUpon>SuspendedRetrievalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\VendorCheckinMenu.resx">
+      <DependentUpon>VendorCheckinMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\checkinName.resx">
+      <DependentUpon>checkinName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\checkinUPC.resx">
+      <DependentUpon>checkinUPC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\DSDMenu.resx">
+      <DependentUpon>DSDMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\VendorMenu.resx">
+      <DependentUpon>VendorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Presentation\VendorList.resx">
+      <DependentUpon>VendorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataDataSet.xsc">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet.xss">
+      <DependentUpon>DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TransactionsDataSet.xsc">
+      <DependentUpon>TransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TransactionsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TransactionsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TransactionsDataSet.xss">
+      <DependentUpon>TransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VendorProductsDataSet.xsc">
+      <DependentUpon>VendorProductsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VendorProductsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VendorProductsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VendorProductsDataSet.xss">
+      <DependentUpon>VendorProductsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.mdf" />
+    <Content Include="Data_log.ldf">
+      <DependentUpon>Data.mdf</DependentUpon>
+    </Content>
+    <Content Include="Transactions.mdf" />
+    <Content Include="Transactions_log.ldf">
+      <DependentUpon>Transactions.mdf</DependentUpon>
+    </Content>
+    <Content Include="VendorProducts.mdf" />
+    <Content Include="VendorProducts_log.ldf">
+      <DependentUpon>VendorProducts.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
